@@ -41,7 +41,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -63,7 +62,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: rgba(darken($primary-color, 5), 0.9);
     list-style: none;
     transform: translate3d(0, 100%, 0);
     @include easeout;
@@ -76,7 +75,7 @@
 
   //Branding side
   &-branding {
-    background-color: $primary-color;
+    background: rgba(darken($primary-color, 5), 0.9);
     transform: translate3d(0, -100%, 0);
     @include easeout;
 
@@ -91,6 +90,7 @@
       background: url("../img/portrait.jpg");
       border-radius: 50%;
       border: solid 3px $secondary-color;
+      background-size: cover;
     }
   }
 
